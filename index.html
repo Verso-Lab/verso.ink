@@ -218,6 +218,37 @@
             &#116;&#101;&#97;&#109;<span style="padding: 0.2em;">&#64;</span>&#118;&#101;&#114;&#115;&#111;&#46;&#105;&#110;&#107;
         </a>
     </div>
+
+    <script>
+        function toggleDarkMode(isDark) {
+            // apply dark mode based on passed parameter
+            document.body.classList.toggle('dark-mode', isDark);
+            document.getElementById('modeToggle').innerHTML = isDark ? '<img src="assets/verso_light.jpg" alt="Dark Mode">' : '<img src="assets/verso_dark.jpg" alt="Light Mode">';
+
+            // toggle dark mode for links and bold-links
+            document.querySelectorAll('a, .bold-link').forEach(function (elem) {
+                elem.classList.toggle('dark-mode', isDark);
+            });
+        }
+
+        document.getElementById('modeToggle').addEventListener('click', function (event) {
+            event.preventDefault();
+            // determine current state and toggle
+            var isCurrentlyDark = document.body.classList.contains('dark-mode');
+            toggleDarkMode(!isCurrentlyDark);
+        });
+
+        function initializeTheme() {
+            var prefersDarkMode = window.matchMedia('(prefers-color-scheme: dark)');
+            toggleDarkMode(prefersDarkMode.matches);
+
+            prefersDarkMode.addEventListener('change', function (e) {
+                toggleDarkMode(e.matches);
+            });
+        }
+        initializeTheme();
+    </script>
+
 </body>
 
 </html>

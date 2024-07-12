@@ -9,227 +9,226 @@
     <meta name="keywords" content="verso, ai, artificial intelligence, consulting, journalism, media, consulting">
     <style>
         :root {
-        --bg-light: #efefef;
-        --text-light: #666;
-        --link-light: #348f92;
+            --bg-light: #efefef;
+            --text-light: #666;
+            --link-light: #348f92;
             --bg-dark: #4a4a4d;
             --text-dark: #d7d7d8;
-        --link-dark: #E57373;
-    }
+            --link-dark: #E57373;
+        }
 
         body {
-        background-color: var(--bg-light);
-        padding: 3rem;
-        font-family: ui-monospace, Menlo, Monaco, "Cascadia Mono", "Segoe UI Mono", "Roboto Mono", "Oxygen Mono", "Ubuntu Monospace", "Source Code Pro", "Fira Mono", "Droid Sans Mono", "Courier New", monospace, 'SF Mono', 'Segoe UI Mono', 'Roboto Mono';
-        /* font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", Arial, sans-serif; */
-        font-size: 1.1rem;
-        color: var(--text-light);
-    }
+            background-color: var(--bg-light);
+            padding: 3rem;
+            font-family: ui-monospace, Menlo, Monaco, "Cascadia Mono", "Segoe UI Mono", "Roboto Mono", "Oxygen Mono", "Ubuntu Monospace", "Source Code Pro", "Fira Mono", "Droid Sans Mono", "Courier New", monospace, 'SF Mono', 'Segoe UI Mono', 'Roboto Mono';
+            /* font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", Arial, sans-serif; */
+            font-size: 1.1rem;
+            color: var(--text-light);
+        }
 
-    body.dark-mode {
-        background-color: var(--bg-dark);
-        color: var(--bg-light);
-    }
-
-    body #code {
-        font-family: ui-monospace, Menlo, Monaco, "Cascadia Mono", "Segoe UI Mono", "Roboto Mono", "Oxygen Mono", "Ubuntu Monospace", "Source Code Pro", "Fira Mono", "Droid Sans Mono", "Courier New", monospace, 'SF Mono', 'Segoe UI Mono', 'Roboto Mono';
-        padding: 0 1rem;
-    }
-
-    body:not(.dark-mode) #code {
+        body.dark-mode {
             background-color: var(--bg-dark);
-        color: var(--text-dark);
-    }
-
-    body:not(.dark-mode) #code a {
-        color: var(--link-dark);
-    }
-
-    body.dark-mode #code {
-        background-color: var(--bg-light);
-        color: var(--text-light);
-    }
-
-    body.dark-mode #code a {
-        color: var(--link-light);
-    }
-
-    h1 {
-        font-size: 3em;
-        font-weight: 900;
-        letter-spacing: -1pt;
-    }
-
-    h1 a {
-        float: right;
-    }
-
-    h2 {
-        line-height: 1.3em;
-    }
-
-    p {
-        line-height: 1.3em;
-    }
-
-        a {
-        color: var(--link-light);
-            text-decoration: none;
+            color: var(--bg-light);
         }
 
-    a.grid-link {
-        font-size: .9em;
-        color: inherit;
-    }
-
-    a.dark-mode,
-    .bold-link.dark-mode {
-        color: var(--link-dark);
-    }
-
-    a.grid-link {
-        color: inherit;
-    }
-
-    ul {
-        list-style-type: none;
-        padding-left: 0;
-    }
-
-    ul.clips li {
-        margin-bottom: .8em;
-    }
-
-    figcaption {
-        position: relative;
-        padding: 5px;
-        font-style: italic;
-        font-size: 0.8em;
-    }
-
-    section {
-        margin: 3rem 0;
-    }
-
-    #code {
-        grid-column: 3 / 4;
-    }
-
-    figure {
-        text-align: right;
-        margin: 0;
-    }
-
-    .container {
-        max-width: 1200px;
-        margin: 0 auto;
-    }
-
-    .bold-link {
-        font-weight: bold;
-        color: var(--link-light);
-        white-space: nowrap;
-    }
-
-    .bold-link.dark-mode {
-        color: var(--link-dark);
-    }
-
-    .columns {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        gap: 2rem;
-    }
-
-    .image-container {
-        width: 100%;
-        position: relative;
-    }
-
-    .image-container::before {
-        content: '';
-        display: block;
-        width: 100%;
-        padding-top: 56.25%;
-    }
-
-    .image-container img {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        bottom: 0;
-        object-fit: contain;
-    }
-
-    @media screen and (max-width: 1000px) {
-        body {
-            padding: 3rem 2rem;
+        body #code {
+            font-family: ui-monospace, Menlo, Monaco, "Cascadia Mono", "Segoe UI Mono", "Roboto Mono", "Oxygen Mono", "Ubuntu Monospace", "Source Code Pro", "Fira Mono", "Droid Sans Mono", "Courier New", monospace, 'SF Mono', 'Segoe UI Mono', 'Roboto Mono';
+            padding: 0 1rem;
         }
 
-        .columns {
-            grid-template-columns: 1fr 1fr;
+        body:not(.dark-mode) #code {
+            background-color: var(--bg-dark);
+            color: var(--text-dark);
         }
 
-        #code {
-            grid-column: span 1;
-        }
-    }
-
-    @media screen and (max-width: 700px) {
-        body {
-            padding: 1rem 2rem;
+        body:not(.dark-mode) #code a {
+            color: var(--link-dark);
         }
 
-        .columns {
-            grid-template-columns: 1fr;
+        body.dark-mode #code {
+            background-color: var(--bg-light);
+            color: var(--text-light);
         }
 
-        #code,
-        #contact {
-            margin: 1rem 0;
-        }
-    }
-
-    @media screen and (max-width: 600px) {
-        body {
-            font-size: 1rem;
-            padding: 1rem .5rem;
+        body.dark-mode #code a {
+            color: var(--link-light);
         }
 
         h1 {
-            font-size: 2.5em;
+            font-size: 3em;
+            font-weight: 900;
+            letter-spacing: -1pt;
         }
 
-        #past-work .columns {
-            gap: 0;
+        h1 a {
+            float: right;
         }
 
-        #code,
-        #contact {
+        h2 {
+            line-height: 1.3em;
+        }
+
+        p {
+            line-height: 1.3em;
+        }
+
+        a {
+            color: var(--link-light);
+            text-decoration: none;
+        }
+
+        a.grid-link {
+            font-size: .9em;
+            color: inherit;
+        }
+
+        a.dark-mode,
+        .bold-link.dark-mode {
+            color: var(--link-dark);
+        }
+
+        a.grid-link {
+            color: inherit;
+        }
+
+        ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        ul.clips li {
+            margin-bottom: .8em;
+        }
+
+        figcaption {
+            position: relative;
+            padding: 5px;
+            font-style: italic;
+            font-size: 0.8em;
+        }
+
+        section {
+            margin: 3rem 0;
+        }
+
+        #code {
+            grid-column: 3 / 4;
+        }
+
+        figure {
+            text-align: right;
             margin: 0;
         }
-    }
 
-    #modeToggle img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        border-radius: 10%;
-    }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
 
-    #modeToggle {
-        display: inline-block;
-        width: 3rem;
-        height: 3rem;
-        vertical-align: middle;
-    }
+        .bold-link {
+            font-weight: bold;
+            color: var(--link-light);
+            white-space: nowrap;
+        }
 
+        .bold-link.dark-mode {
+            color: var(--link-dark);
+        }
+
+        .columns {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 2rem;
+        }
+
+        .image-container {
+            width: 100%;
+            position: relative;
+        }
+
+        .image-container::before {
+            content: '';
+            display: block;
+            width: 100%;
+            padding-top: 56.25%;
+        }
+
+        .image-container img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            bottom: 0;
+            object-fit: contain;
+        }
+
+        @media screen and (max-width: 1000px) {
+            body {
+                padding: 3rem 2rem;
+            }
+
+            .columns {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            #code {
+                grid-column: span 1;
+            }
+        }
+
+        @media screen and (max-width: 700px) {
+            body {
+                padding: 1rem 2rem;
+            }
+
+            .columns {
+                grid-template-columns: 1fr;
+            }
+
+            #code,
+            #contact {
+                margin: 1rem 0;
+            }
+        }
+
+        @media screen and (max-width: 600px) {
+            body {
+                font-size: 1rem;
+                padding: 1rem .5rem;
+            }
+
+            h1 {
+                font-size: 2.5em;
+            }
+
+            #past-work .columns {
+                gap: 0;
+            }
+
+            #code,
+            #contact {
+                margin: 0;
+            }
+        }
+
+        #modeToggle img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 10%;
+        }
+
+        #modeToggle {
+            display: inline-block;
+            width: 3rem;
+            height: 3rem;
+            vertical-align: middle;
+        }
     </style>
 </head>
 
 <body>
-    
+
     <div class="container">
         <h1>Verso<a href="#" id="modeToggle"></a></h1>
         <p>We help media, nonprofits and business leaders step into the AI age.</p>
@@ -251,16 +250,16 @@
                 </div>
             </div>
 
-        <section id="team">
-            <h2>Who we are</h2>
-            <p>We are a team of data scientists, journalists and designers who are passionate about helping organizations use AI to make better decisions.</p>
-        </section>
+            <section id="team">
+                <h2>Who we are</h2>
+                <p>We are a team of data scientists, journalists and designers who are passionate about helping organizations use AI to make better decisions.</p>
+            </section>
 
-        <section id="work-with-us">
-            <h2>Work with us</h2>
-            <p>If you're interested in working with us, please send us an email at <a href="mailto:team@verso.ink">team@verso.ink</a>.</p>
-        </section>
-        
+            <section id="work-with-us">
+                <h2>Work with us</h2>
+                <p>If you're interested in working with us, please send us an email at <a href="mailto:team@verso.ink">team@verso.ink</a>.</p>
+            </section>
+
     </div>
 
     <script>

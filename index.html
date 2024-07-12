@@ -30,6 +30,11 @@
             color: var(--bg-light);
         }
 
+        #highlight {
+            background-color: var(--bg-dark);
+            color: var(--link-dark);
+        }
+        
         body #code {
             font-family: ui-monospace, Menlo, Monaco, "Cascadia Mono", "Segoe UI Mono", "Roboto Mono", "Oxygen Mono", "Ubuntu Monospace", "Source Code Pro", "Fira Mono", "Droid Sans Mono", "Courier New", monospace, 'SF Mono', 'Segoe UI Mono', 'Roboto Mono';
             padding: 0 1rem;
@@ -229,7 +234,10 @@
 <body>
 
     <div class="container">
-        <h1>Verso<a href="#" id="modeToggle"></a></h1>
+        <h1>
+            <span id="highlight">Verso</span> is an AI consulting lab based in San Francisco.
+            <!-- <a href="#" id="modeToggle"></a> -->
+        </h1>
         
         <section id="work">
             <h2>We help newsrooms, nonprofits, and business leaders step into the AI age.</h2>

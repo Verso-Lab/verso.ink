@@ -82,15 +82,15 @@
             white-space: nowrap;
         }
 
-        .columns {
+        .three-columns {
             display: grid;
             grid-template-columns: 1fr 1fr 1fr;
             gap: 2rem;
         }
 
-        .bio-columns {
-            display: flex;
-            justify-content: space-between;
+        .two-columns {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
             gap: 2rem;
         }
 
@@ -103,7 +103,7 @@
                 width: 4rem;
             }
 
-            .columns {
+            .three-columns {
                 grid-template-columns: 1fr;
                 gap: 0;
             }
@@ -131,7 +131,7 @@
                 padding: 2rem;
             }
 
-            .bio-columns {
+            .two-columns {
                 display: block;
             }
 
@@ -159,7 +159,7 @@
         
         <section id="work">
             <h2>We help newsrooms, nonprofits, and business leaders step into the AI age, drawing on our journalistic and technical experience.</h2>
-            <div class="columns">
+            <div class="three-columns">
                 <div>
                     <h3>AI workshops</h3>
                     <p>
@@ -185,7 +185,7 @@
         <!-- HOLD FOR
         <section id="our-clients"> 
             <h2>Some of our clients</h2>
-            <div class="columns">
+            <div class="three-columns">
                 <div>
                     <h3>John S. Knight Fellowships at Stanford University</h3>
                     <p>tktktk</p>
@@ -201,24 +201,24 @@
             </div>
         </section> -->
 
-        <section id="who-we-are" class="columns">
+        <section id="who-we-are" class="three-columns">
             <div style="grid-column: span 2;">
                 <h2>Who we are</h2>
                 <p>
                     <strong>Patrick Swanson</strong> and <strong>Kaveh Waddell</strong> are journalists and technologists. They were 2024 John S. Knight Fellows at Stanford University, where they studied and designed generative AI tools and strategy for newsrooms.
                 </p>
-                <div class="bio-columns">
+                <div class="two-columns">
                     <p>
                         <strong>Patrick</strong> has ten years of leadership experience at the intersection of media and tech. He founded and led the social team in Austria's largest newsroom, reaching a daily audience of 2.4 million on TikTok, Instagram, and Facebook.
                 </p>
                 <p>
-                        <strong>Kaveh</strong> is an investigative data journalist based in San Francisco; he has reported on AI, privacy and society for Consumer Reports, Axios and The Atlantic.
+                        <strong>Kaveh</strong> is an investigative data journalist. He has reported on AI, privacy and society for Consumer Reports, Axios and The Atlantic.
                 </p>
                 </div>
             </div>
         </section>
 
-        <section id="work-with-us" class="columns">
+        <section id="work-with-us" class="three-columns">
             <div style="grid-column: span 2;">
                 <h2>Work with us</h2>
                 <p>

@@ -88,6 +88,12 @@
             gap: 2rem;
         }
 
+        .bio-columns {
+            display: flex;
+            justify-content: space-between;
+            gap: 2rem;
+        }
+
         @media screen and (max-width: 1000px) {
             body {
                 padding: 4rem;
@@ -123,6 +129,10 @@
             body {
                 font-size: 1rem;
                 padding: 2rem;
+            }
+
+            .bio-columns {
+                display: block;
             }
 
             h1 {
@@ -196,9 +206,14 @@
                 <p>
                     <strong>Patrick Swanson</strong> and <strong>Kaveh Waddell</strong> are journalists and technologists. They were 2024 John S. Knight Fellows at Stanford University, where they studied and designed generative AI tools and strategy for newsrooms.
                 </p>
-                <p>
-                    <strong>Patrick</strong> founded and led the social media team in Austria's largest newsroom, reaching a daily audience of 2.4 million on TikTok, Instagram, and Facebook. <strong>Kaveh</strong> is an investigative data journalist based in San Francisco; he has reported on AI, privacy and society for Consumer Reports, Axios and The Atlantic.
+                <div class="bio-columns">
+                    <p>
+                        <strong>Patrick</strong> founded and led the social media team in Austria's largest newsroom, reaching a daily audience of 2.4 million on TikTok, Instagram, and Facebook.
                 </p>
+                <p>
+                        <strong>Kaveh</strong> is an investigative data journalist based in San Francisco; he has reported on AI, privacy and society for Consumer Reports, Axios and The Atlantic.
+                </p>
+                </div>
             </div>
         </section>
 

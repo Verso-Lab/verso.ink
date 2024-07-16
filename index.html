@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
@@ -30,6 +30,8 @@
             --padding-large: 5rem;
             --padding-medium: 4rem;
             --padding-small: 2rem;
+            --toggle-offset-horizontal: 0.5rem;
+            --toggle-offset-vertical: -0.5rem; 
         }
 
         body {
@@ -40,7 +42,6 @@
             background-color: var(--bg-dark);
             color: var(--text-dark);
         }
-
 
         h1 {
             margin-top: 0;
@@ -82,14 +83,40 @@
             top: 0;
             right: 0;
             display: flex;
-            justify-content: flex-end;
-            width: 5rem;
+            flex-direction: column;
+            align-items: flex-end;
+            padding: 0.5rem;
             z-index: 1000;
         }
 
         #logo {
-            padding: .5rem .5rem 0 0;
-            width: 100%;
+            width: 3rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .lang-toggle {
+        background: none;
+        border: 1px solid var(--text-dark);
+        color: var(--text-dark);
+        font-size: 0.8em;
+        padding: 2px 5px;
+        cursor: pointer;
+        transition: opacity 0.3s ease;
+        align-self: flex-end;
+        margin-right: var(--toggle-offset-horizontal);
+        margin-top: var(--toggle-offset-vertical);
+        }
+
+        .lang-toggle:hover {
+            opacity: 0.7;
+        }
+
+        .lang-toggle::after {
+            content: 'EN';
+        }
+
+        html[lang="de"] .lang-toggle::after {
+            content: 'DE';
         }
 
         section {
@@ -123,6 +150,18 @@
             gap: 2rem;
         }
 
+        .de {
+            display: none;
+        }
+
+        html[lang="de"] .en {
+            display: none;
+        }
+
+        html[lang="de"] .de {
+            display: block;
+        }
+
         @media screen and (max-width: 1000px) {
             body {
                 padding: var(--padding-medium);
@@ -136,7 +175,6 @@
                 grid-template-columns: 1fr;
                 gap: 0;
             }
-
         }
 
         @media screen and (max-width: 700px) {
@@ -148,10 +186,13 @@
                 width: 3rem;
             }
 
+            #logo {
+                width: 100%;
+            }
+
             h1 {
                 font-size: 2.5em;
             }
-
         }
 
         @media screen and (max-width: 600px) {
@@ -181,10 +222,14 @@
             <a href="#top">
                 <img id="logo" src="assets/verso_logo_dark_web.png" alt="Verso logo">
             </a>
+            <button class="lang-toggle" onclick="toggleLanguage()" aria-label="Toggle language"></button>
         </div>
         <div class="container">
-            <h1>
+            <h1 class="en">
                 Verso is an AI consulting lab based in San Francisco.
+            </h1>
+            <h1 class="de">
+                Verso ist ein KI-Beratungslabor mit Sitz in San Francisco.
             </h1>
         </div>
     </header>
@@ -192,61 +237,66 @@
     <main>
         <div class="container">
             <section id="work">
-                <h2>We help newsrooms, nonprofits, and business leaders step into the AI age, drawing on our journalistic and technical experience.</h2>
+                <h2 class="en">We help newsrooms, nonprofits, and business leaders step into the AI age, drawing on our journalistic and technical experience.</h2>
+                <h2 class="de">Wir begleiten Medien, Führungskräfte und gemeinnützige Organisationen auf dem Weg ins KI-Zeitalter.</h2>
                 <div class="three-columns">
                     <div>
-                        <h3>AI workshops</h3>
-                        <p>
+                        <h3 class="en">AI workshops</h3>
+                        <h3 class="de">KI-Training</h3>
+                        <p class="en">
                             Verso provides <span id="highlight">customized training</span> that helps organizations use AI to become more creative, sustainable and effective. Our workshops are built on Verso's custom tools and engage participants with hands-on experiments to introduce them to the possibilities and risks of AI, and to offer practical skills they can put to use right away.
+                        </p>
+                        <p class="de">
+                            Verso bietet <span id="highlight">maßgeschneiderte Workshops</span> an, die Newsrooms und Unternehmen kreativer und effektiver machen. Unser Training basiert auf eigens entwickelten Tools und vermittelt durch praktische Übungen die Möglichkeiten und Risiken von KI sowie direkt anwendbare Skills.
                         </p>
                     </div>
                     <div>
-                        <h3>AI strategy</h3>
-                        <p>
+                        <h3 class="en">AI strategy</h3>
+                        <h3 class="de">KI-Strategie</h3>
+                        <p class="en">
                             Verso collaborates with organizational leaders to develop ethical and effective <span id="highlight">AI strategies</span>.
                             We facilitate internal conversations to draw out organizational values, then help leaders navigate hiring, community engagement, and public communication of their AI principles to build trust with audiences and membership.
                         </p>
+                        <p class="de">
+                            Verso arbeitet mit Führungskräften zusammen, um nachhaltige <span id="highlight">KI-Strategien</span> zu entwickeln.
+                            Wir begleiten die Entwicklung von KI-Guidelines und helfen Führungskräften beim Recruiting, Community-Engagement und der öffentlichen Kommunikation. Das Ziel ist Vertrauen und Transparenz.
+                        </p>
                     </div>
                     <div>
-                        <h3>AI product design</h3>
-                        <p>
+                        <h3 class="en">AI product design</h3>
+                        <h3 class="de">KI-Produkte und Tools</h3>
+                        <p class="en">
                             Verso helps organizations identify areas of opportunity for using AI. We point leaders toward the best available products—and when they don't exist, we prototype <span id="highlight">new AI tools</span> to solve specific problems. We work with organizations to design, test, and refine these tools, and to develop strategies for integrating them into existing workflows.
+                        </p>
+                        <p class="de">
+                            Verso hilft Organisationen, Einsatzmöglichkeiten für KI zu identifizieren. Wir identifizieren die besten verfügbaren Produkte – und entwickeln bei Bedarf <span id="highlight">neue KI-Tools</span> für spezifische Aufgaben. Wir designen, testen und optimieren diese Tools, und erarbeiten gemeinsam Strategien für die Integration in bestehende Workflows.
                         </p>
                     </div>
                 </div>
             </section>
 
-            <!-- HOLD FOR
-            <section id="our-clients"> 
-                <h2>Some of our clients</h2>
-                <div class="three-columns">
-                    <div>
-                        <h3>John S. Knight Fellowships at Stanford University</h3>
-                        <p>tktktk</p>
-                    </div>
-                    <div>
-                        <h3>Der Standard</h3>
-                        <p>tktktk</p>
-                    </div>
-                    <div>
-                        <h3>Hashtag</h3>
-                        <p>tktktk</p>
-                    </div>
-                </div>
-            </section> -->
-
             <section id="who-we-are" class="three-columns">
                 <div style="grid-column: span 2;">
-                    <h2>Who we are</h2>
-                    <p>
+                    <h2 class="en">Who we are</h2>
+                    <h2 class="de">Wer wir sind</h2>
+                    <p class="en">
                         <strong>Patrick Swanson and Kaveh Waddell</strong> are journalists and technologists. They were 2024 John S. Knight Fellows at Stanford University, where they studied and designed generative AI tools and strategy for newsrooms.
                     </p>
+                    <p class="de">
+                        <strong>Patrick Swanson und Kaveh Waddell</strong> sind Journalisten und Technologen. Sie forschten im Jahr 2024 als John S. Knight Fellows an der Stanford University, wo sie generative KI-Tools und Strategien für Medien entwickelten.
+                    </p>
                     <div class="two-columns">
-                        <p>
+                        <p class="en">
                             <strong>Patrick</strong> has ten years of leadership experience at the intersection of media and tech. He founded and led the social team in Austria's largest newsroom, reaching a daily audience of 2.4 million on TikTok, Instagram, and Facebook.
                         </p>
-                        <p>
-                            <strong>Kaveh</strong> is an investigative data journalist. He led technology investigations at Consumer Reports, launched the AI beat at Axios, and reported on privacy, surveillance and for The Atlantic.
+                        <p class="de">
+                            <strong>Patrick</strong> hat zehn Jahre Führungserfahrung im Bereich Medien und Tech. Er gründete und leitete das Social Media-Team der Zeim im Bild im ORF und erreichte so ein tägliches Publikum von 2,4 Millionen Followern auf TikTok, Instagram und Facebook.
+                        </p>
+                        <p class="en">
+                            <strong>Kaveh</strong> is an investigative data journalist. He led technology investigations at Consumer Reports, launched the AI beat at Axios, and reported on privacy and surveillance for The Atlantic.
+                        </p>
+                        <p class="de">
+                            <strong>Kaveh</strong> ist ein investigativer Datenjournalist. Er leitete Technologie-Recherchen bei Consumer Reports, startete das KI-Ressort bei Axios und berichtete für The Atlantic über Datenschutz und Überwachung.
                         </p>
                     </div>
                 </div>
@@ -254,14 +304,29 @@
 
             <section id="work-with-us" class="three-columns">
                 <div style="grid-column: span 2;">
-                    <h2>Work with us</h2>
-                    <p>
+                    <h2 class="en">Work with us</h2>
+                    <h2 class="de">Kontakt</h2>
+                    <p class="en">
                         All of our training and implementation work is customized to individual organizations and your needs. <strong style="text-wrap: nowrap">Please get in touch:</strong> <a class="bold-link" href="mailto:team@verso.ink">team@verso.ink</a>
+                    </p>
+                    <p class="de">
+                        Alle unsere Workshops und Projekte sind auf einzelne Organisationen und ihre Bedürfnisse zugeschnitten. <strong style="text-wrap: nowrap">Get in touch:</strong> <a class="bold-link" href="mailto:team@verso.ink">team@verso.ink</a>
                     </p>
                 </div>
             </section>
         </div>
     </main>
+
+    <script>
+        function toggleLanguage() {
+            const html = document.documentElement;
+            if (html.lang === "en") {
+                html.lang = "de";
+            } else {
+                html.lang = "en";
+            }
+        }
+    </script>
 </body>
 
 </html>

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" id="htmlRoot">
 
 <head>
     <meta charset="UTF-8">
@@ -95,16 +95,16 @@
         }
 
         .lang-toggle {
-        background: none;
-        border: 1px solid var(--text-dark);
-        color: var(--text-dark);
-        font-size: 0.8em;
-        padding: 2px 5px;
-        cursor: pointer;
-        transition: opacity 0.3s ease;
-        align-self: flex-end;
-        margin-right: var(--toggle-offset-horizontal);
-        margin-top: var(--toggle-offset-vertical);
+            background: none;
+            border: 1px solid var(--text-dark);
+            color: var(--text-dark);
+            font-size: 0.8em;
+            padding: 2px 5px;
+            cursor: pointer;
+            transition: opacity 0.3s ease;
+            align-self: flex-end;
+            margin-right: var(--toggle-offset-horizontal);
+            margin-top: var(--toggle-offset-vertical);
         }
 
         .lang-toggle:hover {
@@ -244,7 +244,7 @@
                         <h3 class="en">AI workshops</h3>
                         <h3 class="de">KI-Workshops</h3>
                         <p class="en">
-                            Verso provides <span id="highlight">customized training</span> that helps organizations use AI to become more creative, sustainable and effective. Our workshops are built on Verso's custom tools and engage participants with hands-on experiments to introduce them to the possibilities and risks of AI, and to offer practical skills they can put to use right away.
+                            Verso provides <span id="highlight">customized training</span> that helps organizations use AI to become more creative, sustainable, and effective. Our workshops are built on Verso's custom tools and engage participants with hands-on experiments to introduce them to the possibilities and risks of AI, and to offer practical skills they can put to use right away.
                         </p>
                         <p class="de">
                             Verso bietet <span id="highlight">maßgeschneidertes Training</span> an, das Newsrooms und Unternehmen kreativer und effektiver macht. Unsere Workshops basieren auf eigens entwickelten Tools und vermitteln durch praktische Übungen die Möglichkeiten und Risiken von KI sowie direkt anwendbare Skills.
@@ -318,14 +318,24 @@
     </main>
 
     <script>
-        function toggleLanguage() {
-            const html = document.documentElement;
-            if (html.lang === "en") {
-                html.lang = "de";
+        function setLanguagePreference() {
+            const htmlRoot = document.getElementById('htmlRoot');
+            const userLang = navigator.language || navigator.userLanguage;
+            
+            if (userLang.startsWith('de')) {
+                htmlRoot.lang = 'de';
             } else {
-                html.lang = "en";
+                htmlRoot.lang = 'en';
             }
         }
+
+        function toggleLanguage() {
+            const htmlRoot = document.getElementById('htmlRoot');
+            htmlRoot.lang = htmlRoot.lang === 'en' ? 'de' : 'en';
+        }
+
+        // Set initial language preference when the page loads
+        window.addEventListener('DOMContentLoaded', setLanguagePreference);
     </script>
 </body>
 

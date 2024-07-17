@@ -1,0 +1,32 @@
+{
+  "header": {
+    "title": "Verso ist ein KI-Beratungslabor mit Sitz in San Francisco."
+  },
+  "main": {
+    "subtitle": "Wir begleiten Medien, Führungskräfte und NGOs auf dem Weg ins KI-Zeitalter. Unser Ansatz verbindet journalistische Erfahrung mit technischem Know-how.",
+    "work": {
+      "workshops": {
+        "title": "KI-Workshops",
+        "content": "Verso bietet <span id=\"highlight\">maßgeschneidertes Training</span> an, das Newsrooms und Unternehmen kreativer und effektiver macht. Unsere Workshops basieren auf eigens entwickelten Tools und vermitteln durch praktische Übungen die Möglichkeiten und Risiken von KI sowie direkt anwendbare Fähigkeiten."
+      },
+      "strategy": {
+        "title": "KI-Strategie",
+        "content": "Verso entwickelt gemeinsam mit Führungskräften nachhaltige <span id=\"highlight\">KI-Strategien</span>. Dabei begleiten wir Unternehmen von der Konzeption von Guidelines über die Personalentwicklung bis hin zur externen Kommunikation. Das Ziel: Vertrauen und Transparenz schaffen."
+      },
+      "product_design": {
+        "title": "KI-Produktdesign",
+        "content": "Verso hilft Organisationen, Chancen für den KI-Einsatz zu erkennen. Wir identifizieren die besten verfügbaren Lösungen – und entwickeln bei Bedarf <span id=\"highlight\">neue KI-Tools</span> für spezifische Aufgaben. Gemeinsam gestalten, testen und optimieren wir diese Tools und erarbeiten Strategien für ihre Integration in bestehende Workflows."
+      }
+    },
+    "who_we_are": {
+      "title": "Wer wir sind",
+      "intro": "<strong>Patrick Swanson und Kaveh Waddell</strong> sind Journalisten und Technologie-Experten. Als John S. Knight Fellows an der Stanford University 2024 erforschten und entwickelten sie generative KI-Tools und Strategien für Nachrichtenredaktionen.",
+      "patrick": "<strong>Patrick</strong> hat ein Jahrzehnt Führungserfahrung an der Schnittstelle von Medien und Technologie. Als Gründer und Leiter des Social-Media-Teams der \"Zeit im Bild\" im ORF erreichte er täglich 2,4 Millionen Follower auf TikTok, Instagram und Facebook.",
+      "kaveh": "<strong>Kaveh</strong> ist ein investigativer Datenjournalist. Er leitete Technologie-Recherchen bei Consumer Reports, startete das KI-Ressort bei Axios und berichtete für The Atlantic über Datenschutz und Überwachung."
+    },
+    "work_with_us": {
+      "title": "Kontakt",
+      "content": "Alle unsere Workshops, Projekte und Tools sind auf einzelne Organisationen und ihre Bedürfnisse zugeschnitten. <strong style=\"text-wrap: nowrap\">Get in touch:</strong> <a class=\"bold-link\" href=\"mailto:team@verso.ink\">team@verso.ink</a>"
+    }
+  }
+}

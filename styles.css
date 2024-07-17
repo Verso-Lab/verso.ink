@@ -1,0 +1,168 @@
+:root {
+    --bg-dark: #4a4a4d;
+    --text-dark: #d7d7d8;
+    --link-dark: #E57373;
+    --padding-large: 5rem;
+    --padding-medium: 4rem;
+    --padding-small: 2rem;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.container {
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+section {
+    margin: 4rem 0;
+}
+
+body {
+    padding: var(--padding-large);
+    margin: 0;
+    font-family: InterVariable, sans-serif;
+    font-feature-settings: 'liga' 1, 'calt' 1;
+    background-color: var(--bg-dark);
+    color: var(--text-dark);
+}
+
+h1 {
+    margin-top: 0;
+    font-size: 3em;
+    font-weight: 800;
+    text-wrap: balance;
+}
+
+h2, h3 {
+    font-weight: 500;
+    text-wrap: balance;
+}
+
+p {
+    font-weight: 300;
+    line-height: 1.3em;
+    margin-bottom: 0;
+}
+
+strong, #highlight {
+    font-weight: 600;
+}
+
+#highlight {
+    color: var(--link-dark);
+}
+
+.bold-link {
+    font-weight: bold;
+    white-space: nowrap;
+    color: var(--link-dark);
+}
+
+.three-columns {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 2rem;
+}
+
+.two-columns {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+
+.lang-toggle {
+    background: none;
+    border: 1px solid var(--text-dark);
+    color: var(--text-dark);
+    padding: 2px 5px;
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+    align-self: flex-end;
+}
+
+.lang-toggle:hover {
+    opacity: 0.7;
+}
+
+#logo-container {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 5rem;
+    z-index: 1000;
+}
+
+#toggle-container {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    padding: 0.5rem;
+    z-index: 1000;
+}
+
+#logo {
+    width: 100%;
+    padding: .5rem .5rem 0 0;
+}
+
+@media screen and (max-width: 1000px) {
+    body {
+        padding: var(--padding-medium);
+    }
+
+    section {
+        margin: 2.5rem 0;
+    }
+
+    #logo-container {
+        width: 4rem;
+    }
+
+    .three-columns {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    body {
+        padding: 3rem;
+    }
+
+    h1 {
+        font-size: 2.5em;
+    }
+
+    #logo-container {
+        width: 3rem;
+    }
+
+    #logo {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    body {
+        font-size: 1rem;
+        padding: var(--padding-small);
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+
+    section {
+        margin: 2rem 0;
+    }
+
+    .two-columns {
+        display: block;
+    }
+}

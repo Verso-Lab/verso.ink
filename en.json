@@ -1,0 +1,32 @@
+{
+  "header": {
+    "title": "Verso is an AI consulting lab based in San Francisco."
+  },
+  "main": {
+    "subtitle": "We help newsrooms, nonprofits, and business leaders step into the AI age, drawing on our journalistic and technical experience.",
+    "work": {
+      "workshops": {
+        "title": "AI workshops",
+        "content": "Verso provides <span id=\"highlight\">customized training</span> that helps organizations use AI to become more creative, sustainable, and effective. Our workshops are built on Verso's custom tools and engage participants with hands-on experiments to introduce them to the possibilities and risks of AI, and to offer practical skills they can put to use right away."
+      },
+      "strategy": {
+        "title": "AI strategy",
+        "content": "Verso collaborates with organizational leaders to develop ethical and effective <span id=\"highlight\">AI strategies</span>. We facilitate internal conversations to draw out organizational values, then help leaders navigate hiring, community engagement, and public communication of their AI principles to build trust with audiences and membership."
+      },
+      "product_design": {
+        "title": "AI product design",
+        "content": "Verso helps organizations identify areas of opportunity for using AI. We point leaders toward the best available products—and when they don't exist, we prototype <span id=\"highlight\">new AI tools</span> to solve specific problems. We work with organizations to design, test, and refine these tools, and to develop strategies for integrating them into existing workflows."
+      }
+    },
+    "who_we_are": {
+      "title": "Who we are",
+      "intro": "<strong>Patrick Swanson and Kaveh Waddell</strong> are journalists and technologists. They were 2024 John S. Knight Fellows at Stanford University, where they studied and designed generative AI tools and strategy for newsrooms.",
+      "patrick": "<strong>Patrick</strong> has ten years of leadership experience at the intersection of media and tech. He founded and led the social team in Austria's largest newsroom, reaching a daily audience of 2.4 million on TikTok, Instagram, and Facebook.",
+      "kaveh": "<strong>Kaveh</strong> is an investigative data journalist. He led technology investigations at Consumer Reports, launched the AI beat at Axios, and reported on privacy and surveillance for The Atlantic."
+    },
+    "work_with_us": {
+      "title": "Work with us",
+      "content": "All of our training and implementation work is customized to individual organizations and your needs. <strong style=\"text-wrap: nowrap\">Please get in touch:</strong> <a class=\"bold-link\" href=\"mailto:team@verso.ink\">team@verso.ink</a>"
+    }
+  }
+}

@@ -21,8 +21,8 @@
     "who_we_are": {
       "title": "Who we are",
       "intro": "<strong>Patrick Swanson and Kaveh Waddell</strong> are journalists and technologists. They were 2024 John S. Knight Fellows at Stanford University, where they studied and designed generative AI tools and strategy for newsrooms.",
-      "patrick": "<strong>Patrick</strong> has ten years of leadership experience at the intersection of media and tech. He founded and led the social team in Austria's largest newsroom, reaching a daily audience of 2.4 million on TikTok, Instagram, and Facebook.",
-      "kaveh": "<strong>Kaveh</strong> is an investigative data journalist. He led technology investigations at Consumer Reports, launched the AI beat at Axios, and reported on privacy and surveillance for The Atlantic."
+      "patrick": "<a class=\"bold-link\" href=\"https://www.patrickdswanson.com/\">Patrick</a> has ten years of leadership experience at the intersection of media and tech. He founded and led the social team in Austria's largest newsroom, reaching a daily audience of 2.4 million on TikTok, Instagram, and Facebook.",
+      "kaveh": "<a class=\"bold-link\" href=\"https://kavehwaddell.com/\">Kaveh</a> is an investigative data journalist. He led technology investigations at Consumer Reports, launched the AI beat at Axios, and reported on privacy and surveillance for The Atlantic."
     },
     "work_with_us": {
       "title": "Work with us",
